@@ -1,93 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ResuMatch</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ResuMatch</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo">ResuMatch</div>
-        <ul class="nav-links">
-            <li>How It Works</li>
-            <li>Features</li>
-            <li>Login</li>
-        </ul>
+  <header class="navbar">
+    <div class="logo">ResuMatch</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#steps">How It Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+    <a href="#" class="nav-btn">Get Started</a>
+  </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Automatically Tailor Your Resume</h1>
-            <p>Upload your master resume and job description. 
-               ResuMatch will generate a customized version for every job.</p>
-            <button class="btn-primary">Get Started</button>
-        </div>
-    </section>
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Build Smarter Resumes for Every Job You Apply To</h1>
+      <p>
+        ResuMatch helps you tailor your resume to job descriptions, improve keyword matching,
+        and create stronger applications that stand out to recruiters.
+      </p>
+      <div class="hero-buttons">
+        <a href="#" class="primary-btn">Get Started</a>
+        <a href="#features" class="secondary-btn">Learn More</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="how">
-        <h2>How It Works</h2>
-        <div class="steps">
-            <div class="card">
-                <h3>1. Upload Resume</h3>
-                <p>Upload your master resume in PDF or DOC format.</p>
-            </div>
+  <section class="features" id="features">
+    <h2>Why Choose ResuMatch?</h2>
+    <p class="section-subtitle">
+      Everything you need to create a better, more targeted resume.
+    </p>
 
-            <div class="card">
-                <h3>2. Paste Job Description</h3>
-                <p>Provide the job details you want to apply for.</p>
-            </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Keyword Matching</h3>
+        <p>
+          Analyze job descriptions and identify the right keywords to improve your resume’s relevance.
+        </p>
+      </div>
 
-            <div class="card">
-                <h3>3. Generate Tailored Resume</h3>
-                <p>Get a customized resume optimized for that role.</p>
-            </div>
-        </div>
-    </section>
+      <div class="feature-card">
+        <h3>ATS Optimization</h3>
+        <p>
+          Make your resume more compatible with applicant tracking systems and improve visibility.
+        </p>
+      </div>
 
-    <!-- INPUT SECTION -->
-    <section class="input-section">
-        <h2>Start Tailoring</h2>
+      <div class="feature-card">
+        <h3>Personalized Suggestions</h3>
+        <p>
+          Get meaningful recommendations while still keeping your tone and writing style natural.
+        </p>
+      </div>
 
-        <div class="input-container">
-            <div class="upload-box">
-                <h3>Upload Master Resume</h3>
-                <input type="file">
-            </div>
+      <div class="feature-card">
+        <h3>Better Resume Structure</h3>
+        <p>
+          Improve formatting, content flow, and clarity to create a stronger professional impression.
+        </p>
+      </div>
+    </div>
+  </section>
 
-            <div class="jd-box">
-                <h3>Paste Job Description</h3>
-                <textarea rows="8" placeholder="Paste job description here..."></textarea>
-            </div>
-        </div>
+  <section class="steps" id="steps">
+    <h2>How It Works</h2>
+    <div class="steps-container">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Upload Resume</h3>
+        <p>
+          Start by uploading your current resume and selecting your target role.
+        </p>
+      </div>
 
-        <button class="btn-primary">Tailor Resume</button>
-    </section>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Add Job Description</h3>
+        <p>
+          Paste the job description so the system can compare your profile with employer requirements.
+        </p>
+      </div>
 
-    <!-- BEFORE AFTER SECTION -->
-    <section class="comparison">
-        <h2>Before & After Preview</h2>
-        <div class="compare-wrapper">
-            <div class="compare-box">
-                <h3>Original Resume</h3>
-                <p>Your original resume content will appear here.</p>
-            </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Get Smart Suggestions</h3>
+        <p>
+          Receive tailored recommendations to improve keywords, skills, formatting, and impact.
+        </p>
+      </div>
+    </div>
+  </section>
 
-            <div class="compare-box">
-                <h3>Tailored Resume</h3>
-                <p>The optimized resume will appear here.</p>
-            </div>
-        </div>
-    </section>
+  <section class="cta">
+    <h2>Make Your Resume Work Harder for You</h2>
+    <p>
+      Stop sending the same resume everywhere. Customize smarter and improve your chances.
+    </p>
+    <a href="#" class="primary-btn">Start Now</a>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 ResuMatch. Built with care.</p>
-    </footer>
+  <footer class="footer" id="contact">
+    <p>© 2026 ResuMatch. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>

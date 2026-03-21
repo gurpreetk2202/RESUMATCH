@@ -1,234 +1,296 @@
-/* =========================
-   RESET
-========================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f8fb;
-    color: #333;
-    line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f4f2;
+  color: #2f2f2f;
+  line-height: 1.6;
 }
 
-/* =========================
-   COLOR PALETTE (Ocean Breeze)
-========================= */
-:root {
-    --navy: #0b0f6b;
-    --blue: #1677a6;
-    --teal: #1ca6bd;
-    --aqua: #7dbcc7;
-    --light: #a6c6cf;
-}
-
-/* =========================
-   NAVBAR
-========================= */
+/* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background: white;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fcf7f3;
+  box-shadow: 0 4px 18px rgba(71, 111, 122, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--navy);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #476f7a;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    font-weight: 500;
+  display: flex;
+  list-style: none;
+  gap: 28px;
 }
 
-.nav-links li {
-    cursor: pointer;
-    transition: 0.3s;
+.nav-links a {
+  text-decoration: none;
+  color: #476f7a;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
-.nav-links li:hover {
-    color: var(--blue);
+.nav-links a:hover {
+  color: #d8737f;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+.nav-btn {
+  text-decoration: none;
+  background: #fcba69;
+  color: #2f2f2f;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #d8737f;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Hero */
 .hero {
-    background: linear-gradient(to right, var(--navy), var(--teal));
-    color: white;
-    text-align: center;
-    padding: 120px 20px;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 8%;
+  background: linear-gradient(135deg, #fcf2e4, #f3d4d8, #dbe5e8);
+  text-align: center;
 }
 
-.hero h1 {
-    font-size: 46px;
-    margin-bottom: 20px;
+.hero-text {
+  max-width: 760px;
 }
 
-.hero p {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    font-size: 18px;
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #476f7a;
 }
 
-/* =========================
-   BUTTON
-========================= */
-.btn-primary {
-    padding: 16px 40px;
-    border: none;
-    background: var(--blue);
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    transition: all 0.3s ease;
+.hero-text p {
+  font-size: 1.08rem;
+  color: #5f5f5f;
+  max-width: 620px;
+  margin: 0 auto 30px;
 }
 
-.btn-primary:hover {
-    background: var(--teal);
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* =========================
-   HOW IT WORKS
-========================= */
-.how {
-    padding: 100px 20px;
-    text-align: center;
-    background: #ffffff;
+.primary-btn,
+.secondary-btn {
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 32px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  display: inline-block;
 }
 
-.how h2 {
-    font-size: 32px;
-    margin-bottom: 50px;
-    color: var(--navy);
+.primary-btn {
+  background: #fcba69;
+  color: #2f2f2f;
+  box-shadow: 0 10px 25px rgba(216, 115, 127, 0.22);
 }
 
+.primary-btn:hover {
+  background: #d8737f;
+  color: white;
+  transform: translateY(-3px) scale(1.03);
+}
+
+.secondary-btn {
+  border: 2px solid #476f7a;
+  color: #476f7a;
+  background: transparent;
+}
+
+.secondary-btn:hover {
+  background: #476f7a;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Sections */
+.features,
+.steps,
+.cta {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.features h2,
+.steps h2,
+.cta h2 {
+  font-size: 2.3rem;
+  margin-bottom: 14px;
+  color: #476f7a;
+}
+
+.section-subtitle {
+  color: #6b5079;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+/* Feature Grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  background: #fffaf7;
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 12px 28px rgba(71, 111, 122, 0.1);
+  transition: 0.3s ease;
+  text-align: left;
+  border-top: 5px solid #fcba69;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-card h3 {
+  color: #d8737f;
+  margin-bottom: 12px;
+}
+
+/* Steps */
 .steps {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+  background: #f7ecee;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.step-card {
+  background: #fffaf7;
+  padding: 30px 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 22px rgba(71, 111, 122, 0.08);
+  transition: 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+}
+
+.step-number {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  background: #ab6c82;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #476f7a, #6b5079);
+  color: white;
+}
+
+.cta h2 {
+  color: white;
+}
+
+.cta p {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  opacity: 0.95;
+}
+
+.cta .primary-btn {
+  background: #fcba69;
+  color: #2f2f2f;
+  box-shadow: none;
+}
+
+.cta .primary-btn:hover {
+  background: #d8737f;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  background: #476f7a;
+  color: #f3f3f3;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
     flex-wrap: wrap;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    width: 260px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card h3 {
-    margin-bottom: 15px;
-    color: var(--blue);
-}
-
-/* =========================
-   INPUT SECTION
-========================= */
-.input-section {
-    padding: 100px 20px;
-    text-align: center;
-    background: var(--light);
-}
-
-.input-section h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: var(--navy);
-}
-
-.input-container {
-    display: flex;
     justify-content: center;
-    gap: 50px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
+    gap: 16px;
+  }
 
-.upload-box,
-.jd-box {
-    background: white;
-    padding: 30px;
-    width: 360px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
 
-.upload-box h3,
-.jd-box h3 {
-    margin-bottom: 15px;
-    color: var(--blue);
-}
-
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-/* =========================
-   COMPARISON SECTION
-========================= */
-.comparison {
-    padding: 100px 20px;
-    text-align: center;
-    background: #ffffff;
-}
-
-.comparison h2 {
-    font-size: 32px;
-    margin-bottom: 50px;
-    color: var(--navy);
-}
-
-.compare-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.compare-box {
-    width: 380px;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-.compare-box h3 {
-    margin-bottom: 15px;
-    color: var(--blue);
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-    text-align: center;
-    padding: 30px;
-    background: var(--navy);
-    color: white;
-    font-size: 14px;
+  .features h2,
+  .steps h2,
+  .cta h2 {
+    font-size: 1.8rem;
+  }
 }
